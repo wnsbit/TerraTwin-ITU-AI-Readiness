@@ -1,0 +1,15 @@
+TerraTwin Final Submission — Remaining items before pressing Submit
+
+BLOCKING / USER-SPECIFIC
+1. Publish this GitHub-ready repository and include the final PUBLIC GitHub URL in the submission email.
+
+ALREADY READY
+- 5-page technical report (DOCX + PDF)
+- Y.3172 mapped use case and policy mapping
+- Evaluation scenarios including failure/controversy
+- Knowledge Base PDF/DOCX (505 sources)
+- AI Readiness Scorecard XLSX with Policy Gaps action register
+- GitHub-ready code ZIP
+- Pitch deck and extended explanation
+- Demo video MP4 with audio (4 minutes 52 seconds; maximum allowed is 7 minutes)
+- Contact email added to the technical report: wnszakri@gmail.com

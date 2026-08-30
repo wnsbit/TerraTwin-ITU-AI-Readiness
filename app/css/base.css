@@ -1,0 +1,219 @@
+/* ===== base.css ===== */
+/* ============================================================
+   TerraTwin — Design tokens
+   Palette sampled from the project's own illustration set:
+   soil, terracotta pot, leaf green, husk gold, coffee-cherry red.
+   Forest/moss retained from the TerraTwin brand deliverables.
+   ============================================================ */
+
+:root {
+  /* Earth — from the soil bowl and seed illustrations */
+  --soil-deep: #4a3426;
+  --soil: #6b4a35;
+  --pot: #b5825c;
+  --pot-light: #c99a72;
+
+  /* Growth — from the healthy plant illustrations */
+  --forest: #1b4332;
+  --moss: #40916c;
+  --leaf: #7c9a5e;
+  --sage: #a8bf92;
+  --sage-pale: #dce8cf;
+
+  /* Surface */
+  --cream: #f6f1e4;
+  --paper: #fdfbf5;
+  --paper-sunk: #efe8d8;
+
+  /* Signal — husk gold from corn/mango, cherry red from coffee */
+  --husk: #d9a63f;
+  --husk-pale: #f4e3bd;
+  --berry: #c4625a;
+  --berry-pale: #f5dcd9;
+
+  /* Ink */
+  --ink: #241f1a;
+  --ink-soft: #6b6257;
+  --ink-faint: #9a9083;
+
+  /* Type */
+  --display: "Fraunces", Georgia, serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Structure */
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+
+  --shadow-sm: 0 1px 3px rgba(74, 52, 38, 0.08);
+  --shadow-md: 0 4px 16px rgba(74, 52, 38, 0.1);
+  --shadow-lg: 0 12px 40px rgba(74, 52, 38, 0.14);
+
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* ---------- Reset ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--body);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+  background: var(--cream);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-variation-settings: "SOFT" 40, "WONK" 1;
+  line-height: 1.15;
+  margin: 0;
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+/* ---------- Focus ---------- */
+:focus-visible {
+  outline: 2.5px solid var(--moss);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ---------- Shared atoms ---------- */
+.eyebrow {
+  font-family: var(--mono);
+  font-size: 10.5px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-faint);
+  font-weight: 500;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 11px 20px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: transform 0.15s var(--ease), background 0.15s var(--ease),
+    box-shadow 0.15s var(--ease);
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: var(--paper);
+}
+
+.btn-primary:hover {
+  background: #143526;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-secondary {
+  background: var(--sage-pale);
+  color: var(--forest);
+}
+
+.btn-secondary:hover {
+  background: #cfe0be;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--ink-soft);
+  border: 1.5px solid #ddd4c2;
+}
+
+.btn-ghost:hover {
+  border-color: var(--moss);
+  color: var(--forest);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.card {
+  background: var(--paper);
+  border-radius: var(--r-lg);
+  border: 1px solid #e8e0cd;
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Utility ---------- */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

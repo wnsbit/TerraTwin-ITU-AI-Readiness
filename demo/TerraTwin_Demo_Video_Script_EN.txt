@@ -1,0 +1,46 @@
+TerraTwin — 5–6 Minute Demo Video Script (ITU AI Readiness Hackathon)
+
+0:00–0:25 — Opening
+“TerraTwin is an AI-readiness digital twin for sustainable agriculture in Jazan, Saudi Arabia. The idea is simple: test the decision before you test the crop. It measures whether a farm is ready for AI, lets the farmer rehearse a decision safely, and then supports day-to-day farm operations.”
+
+0:25–1:05 — Dashboard + Readiness Scorecard
+Show Dashboard, then Readiness Assessment.
+“This readiness assessment has 19 questions across five farm-level dimensions: Data, Infrastructure, Governance, Skills, and Sandbox Readiness. The score is out of 100, but the important output is not the grade. TerraTwin names the weakest dimension as the priority gap, so investment starts with the actual constraint.”
+
+1:05–2:20 — Digital Twin / Sandbox
+Open Sandbox. Choose a Jazan sub-region, soil, season/weather pattern, and crop. Take one weekly action.
+“The farmer can safely rehearse a season one week at a time. Health, growth, soil moisture, nutrients, pest pressure and salinity change with weather and the selected action. Every candidate decision traverses the ITU-T Y.3172 pipeline.”
+Show the pipeline trace.
+“SRC provides the farm data; C collects it; PP prepares it; M runs the prototype rule-based simulation; P applies policy and safety rules; D distributes the approved result; and SINK displays the outcome. The Model node is deliberately disclosed as rule-based in this prototype — no trained-model accuracy claim is made.”
+Try an unsafe action if possible, such as excessive irrigation or fertiliser.
+“The key node is Policy. An unsafe request can be refused before it reaches the crop, and the reason is shown to the farmer. Governance becomes executable behaviour, not a separate document.”
+
+2:20–3:05 — Plant Register + Scheduling
+Show My Plants.
+“TerraTwin also runs the farm day to day. Plants are registered with their irrigation and fertilisation schedules. Every event the farmer logs becomes part of a continuous operating record. This means data readiness can improve simply by using the tool.”
+
+3:05–3:45 — Plant Doctor
+Show Plant Doctor/photo upload.
+“With a user-supplied Gemini key, the Plant Doctor can analyse a photo in the Jazan context and return species, stage, a health score, diagnosis and actions. Without a key or network, TerraTwin falls back to local image analysis. The fallback is intentionally labelled as coarser, so the system degrades rather than silently fails.”
+
+3:45–4:25 — Weather Watch
+Show Weather.
+“Weather is translated into an action, not only a number. TerraTwin looks for heat stress, sharp temperature swings, rain that can replace irrigation, humidity-driven fungal risk, wind and cold highland nights. A rain event can move the irrigation schedule and estimate water saved.”
+
+4:25–4:55 — Community + Market
+Show Forum and Market.
+“The regional layer connects farmers through text, images and voice notes, and includes a local market for seed, seedlings, inputs and services. Voice is important because field expertise should not be excluded by a typing-first interface.”
+
+4:55–5:30 — References / Knowledge Base
+Show References or Farmy.
+“The submission includes a knowledge base of 505 authentic public sources: 83 on AI readiness, standards, governance and Saudi policy, and 422 agricultural and technical sources. Farmy uses a local agricultural corpus, while the architecture remains expressed in ITU-T Y.3172 terms.”
+
+5:30–5:55 — Closing
+“TerraTwin does not claim that a prototype model can replace an agronomist. It demonstrates a safer path to agricultural AI: measure readiness, test before deployment, keep the farmer in control, and build the data needed for a stronger future model. TerraTwin: test the decision before you test the crop.”
+
+Recording tips:
+- Record at 1080p if possible.
+- Keep total length below 7:00.
+- Use the actual application, not only slides.
+- Make the Y.3172 pipeline and at least one Policy-node refusal visible.
+- Do not expose a real Gemini API key in the recording.
